@@ -4,7 +4,7 @@
 #
 Name     : intltool
 Version  : 0.51.0
-Release  : 10
+Release  : 11
 URL      : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source0  : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Summary  : No detailed summary available
