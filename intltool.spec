@@ -6,7 +6,7 @@
 #
 Name     : intltool
 Version  : 0.51.0
-Release  : 13
+Release  : 14
 URL      : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source0  : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source99 : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz.asc
@@ -64,7 +64,7 @@ doc components for the intltool package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1491869895
+export SOURCE_DATE_EPOCH=1492174372
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -76,7 +76,7 @@ export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1491869895
+export SOURCE_DATE_EPOCH=1492174372
 rm -rf %{buildroot}
 %make_install
 
