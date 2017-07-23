@@ -6,7 +6,7 @@
 #
 Name     : intltool
 Version  : 0.51.0
-Release  : 16
+Release  : 17
 URL      : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source0  : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source99 : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz.asc
@@ -18,6 +18,7 @@ Requires: intltool-data
 Requires: intltool-doc
 Requires: perl(XML::Parser)
 BuildRequires : perl(XML::Parser)
+Patch1: perlfixes.patch
 
 %description
 ===============
@@ -62,10 +63,14 @@ doc components for the intltool package.
 
 %prep
 %setup -q -n intltool-0.51.0
+%patch1 -p1
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492174467
+export SOURCE_DATE_EPOCH=1500769620
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -73,11 +78,11 @@ make V=1  %{?_smp_mflags}
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1492174467
+export SOURCE_DATE_EPOCH=1500769620
 rm -rf %{buildroot}
 %make_install
 
