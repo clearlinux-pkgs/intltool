@@ -41,3 +41,14 @@
      }
  
      # \s makes this not work, why?
+--- intltool-0.51.0/intltool-update.in~	2017-07-23 00:37:58.000000000 +0000
++++ intltool-0.51.0/intltool-update.in	2017-07-23 15:09:40.196087598 +0000
+@@ -1068,7 +1068,7 @@
+ 	my $untouched = $1;
+ 	my $sub = "";
+         # Ignore recursive definitions of variables
+-        $sub = $varhash{$2} if defined $varhash{$2} and $varhash{$2} !~ /\${?$2}?/;
++        $sub = $varhash{$2} if defined $varhash{$2} and $varhash{$2} !~ /\$\{?$2\}?/;
+ 
+ 	return SubstituteVariable ("$untouched$sub$rest");
+     }
