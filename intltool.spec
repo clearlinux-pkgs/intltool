@@ -6,7 +6,7 @@
 #
 Name     : intltool
 Version  : 0.51.0
-Release  : 25
+Release  : 26
 URL      : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source0  : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
 Source1  : https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz.asc
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604441488
+export SOURCE_DATE_EPOCH=1607983720
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,7 +102,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1604441488
+export SOURCE_DATE_EPOCH=1607983720
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/intltool
 cp %{_builddir}/intltool-0.51.0/COPYING %{buildroot}/usr/share/package-licenses/intltool/dfac199a7539a404407098a2541b9482279f690d
